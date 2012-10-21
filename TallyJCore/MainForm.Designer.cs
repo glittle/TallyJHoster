@@ -184,11 +184,11 @@
       this.lblStatus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
       this.lblStatus.AutoSize = true;
-      this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.lblStatus.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+      this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.lblStatus.ForeColor = System.Drawing.Color.Maroon;
       this.lblStatus.Location = new System.Drawing.Point(12, 34);
       this.lblStatus.Name = "lblStatus";
-      this.lblStatus.Size = new System.Drawing.Size(71, 16);
+      this.lblStatus.Size = new System.Drawing.Size(78, 18);
       this.lblStatus.TabIndex = 12;
       this.lblStatus.Text = "Starting up";
       // 
@@ -291,21 +291,21 @@
       // 
       this.startServerToolStripMenuItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
       this.startServerToolStripMenuItem1.Name = "startServerToolStripMenuItem1";
-      this.startServerToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+      this.startServerToolStripMenuItem1.Size = new System.Drawing.Size(133, 22);
       this.startServerToolStripMenuItem1.Text = "&Start Server";
       this.startServerToolStripMenuItem1.Click += new System.EventHandler(this.startServerToolStripMenuItem1_Click);
       // 
       // stopServerToolStripMenuItem1
       // 
       this.stopServerToolStripMenuItem1.Name = "stopServerToolStripMenuItem1";
-      this.stopServerToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+      this.stopServerToolStripMenuItem1.Size = new System.Drawing.Size(133, 22);
       this.stopServerToolStripMenuItem1.Text = "Stop Server";
       this.stopServerToolStripMenuItem1.Click += new System.EventHandler(this.stopServerToolStripMenuItem1_Click);
       // 
       // exitToolStripMenuItem1
       // 
       this.exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
-      this.exitToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+      this.exitToolStripMenuItem1.Size = new System.Drawing.Size(133, 22);
       this.exitToolStripMenuItem1.Text = "E&xit";
       this.exitToolStripMenuItem1.Click += new System.EventHandler(this.exitToolStripMenuItem1_Click);
       // 
@@ -343,7 +343,7 @@
       // aboutToolStripMenuItem2
       // 
       this.aboutToolStripMenuItem2.Name = "aboutToolStripMenuItem2";
-      this.aboutToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
+      this.aboutToolStripMenuItem2.Size = new System.Drawing.Size(107, 22);
       this.aboutToolStripMenuItem2.Text = "&About";
       // 
       // MainForm
