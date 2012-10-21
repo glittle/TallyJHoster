@@ -69,16 +69,16 @@
       // 
       this.txtFolder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-      this.txtFolder.Location = new System.Drawing.Point(33, 83);
+      this.txtFolder.Location = new System.Drawing.Point(33, 50);
       this.txtFolder.Name = "txtFolder";
-      this.txtFolder.Size = new System.Drawing.Size(280, 20);
+      this.txtFolder.Size = new System.Drawing.Size(215, 20);
       this.txtFolder.TabIndex = 0;
       this.txtFolder.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
       // 
       // label1
       // 
       this.label1.AutoSize = true;
-      this.label1.Location = new System.Drawing.Point(12, 67);
+      this.label1.Location = new System.Drawing.Point(12, 34);
       this.label1.Name = "label1";
       this.label1.Size = new System.Drawing.Size(132, 13);
       this.label1.TabIndex = 1;
@@ -87,7 +87,7 @@
       // btnSelectFolder
       // 
       this.btnSelectFolder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-      this.btnSelectFolder.Location = new System.Drawing.Point(319, 83);
+      this.btnSelectFolder.Location = new System.Drawing.Point(254, 50);
       this.btnSelectFolder.Name = "btnSelectFolder";
       this.btnSelectFolder.Size = new System.Drawing.Size(32, 20);
       this.btnSelectFolder.TabIndex = 1;
@@ -98,7 +98,7 @@
       // label2
       // 
       this.label2.AutoSize = true;
-      this.label2.Location = new System.Drawing.Point(12, 106);
+      this.label2.Location = new System.Drawing.Point(12, 73);
       this.label2.Name = "label2";
       this.label2.Size = new System.Drawing.Size(36, 13);
       this.label2.TabIndex = 3;
@@ -106,7 +106,7 @@
       // 
       // txtPort
       // 
-      this.txtPort.Location = new System.Drawing.Point(33, 122);
+      this.txtPort.Location = new System.Drawing.Point(33, 89);
       this.txtPort.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -130,7 +130,7 @@
       // 
       // btnStart
       // 
-      this.btnStart.Location = new System.Drawing.Point(140, 114);
+      this.btnStart.Location = new System.Drawing.Point(29, 124);
       this.btnStart.Name = "btnStart";
       this.btnStart.Size = new System.Drawing.Size(105, 33);
       this.btnStart.TabIndex = 3;
@@ -141,7 +141,7 @@
       // btnStop
       // 
       this.btnStop.Enabled = false;
-      this.btnStop.Location = new System.Drawing.Point(251, 114);
+      this.btnStop.Location = new System.Drawing.Point(144, 124);
       this.btnStop.Name = "btnStop";
       this.btnStop.Size = new System.Drawing.Size(105, 33);
       this.btnStop.TabIndex = 4;
@@ -151,18 +151,18 @@
       // 
       // txtURL
       // 
-      this.txtURL.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+      this.txtURL.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-      this.txtURL.Location = new System.Drawing.Point(33, 182);
+      this.txtURL.Location = new System.Drawing.Point(33, 226);
       this.txtURL.Name = "txtURL";
       this.txtURL.ReadOnly = true;
-      this.txtURL.Size = new System.Drawing.Size(216, 20);
+      this.txtURL.Size = new System.Drawing.Size(208, 20);
       this.txtURL.TabIndex = 9;
       // 
       // label3
       // 
       this.label3.AutoSize = true;
-      this.label3.Location = new System.Drawing.Point(12, 166);
+      this.label3.Location = new System.Drawing.Point(12, 210);
       this.label3.Name = "label3";
       this.label3.Size = new System.Drawing.Size(109, 13);
       this.label3.TabIndex = 10;
@@ -170,8 +170,8 @@
       // 
       // btnView
       // 
-      this.btnView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-      this.btnView.Location = new System.Drawing.Point(33, 208);
+      this.btnView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+      this.btnView.Location = new System.Drawing.Point(33, 252);
       this.btnView.Name = "btnView";
       this.btnView.Size = new System.Drawing.Size(101, 30);
       this.btnView.TabIndex = 5;
@@ -186,7 +186,7 @@
       this.lblStatus.AutoSize = true;
       this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.lblStatus.ForeColor = System.Drawing.Color.Maroon;
-      this.lblStatus.Location = new System.Drawing.Point(12, 34);
+      this.lblStatus.Location = new System.Drawing.Point(30, 160);
       this.lblStatus.Name = "lblStatus";
       this.lblStatus.Size = new System.Drawing.Size(78, 18);
       this.lblStatus.TabIndex = 12;
@@ -194,8 +194,8 @@
       // 
       // btnCopyToClipboard
       // 
-      this.btnCopyToClipboard.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-      this.btnCopyToClipboard.Location = new System.Drawing.Point(140, 208);
+      this.btnCopyToClipboard.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+      this.btnCopyToClipboard.Location = new System.Drawing.Point(140, 252);
       this.btnCopyToClipboard.Name = "btnCopyToClipboard";
       this.btnCopyToClipboard.Size = new System.Drawing.Size(101, 30);
       this.btnCopyToClipboard.TabIndex = 6;
@@ -272,7 +272,7 @@
             this.aboutToolStripMenuItem1});
       this.menuStrip1.Location = new System.Drawing.Point(0, 0);
       this.menuStrip1.Name = "menuStrip1";
-      this.menuStrip1.Size = new System.Drawing.Size(376, 24);
+      this.menuStrip1.Size = new System.Drawing.Size(304, 24);
       this.menuStrip1.TabIndex = 13;
       this.menuStrip1.Text = "menuStrip1";
       // 
@@ -350,7 +350,7 @@
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.ClientSize = new System.Drawing.Size(376, 253);
+      this.ClientSize = new System.Drawing.Size(304, 304);
       this.Controls.Add(this.btnCopyToClipboard);
       this.Controls.Add(this.lblStatus);
       this.Controls.Add(this.btnView);
@@ -367,7 +367,7 @@
       this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
       this.MainMenuStrip = this.menuStrip1;
       this.MaximizeBox = false;
-      this.MinimumSize = new System.Drawing.Size(392, 291);
+      this.MinimumSize = new System.Drawing.Size(320, 342);
       this.Name = "MainForm";
       this.Text = "TallyJ Server";
       this.Load += new System.EventHandler(this.MainForm_Load);

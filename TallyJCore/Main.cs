@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -45,9 +46,11 @@ namespace TallyJCore
         return;
       }
 
+      var hostname = Dns.GetHostName();
+
       try
       {
-        _server = new Server(_port, "/", _webFolderPath, false, true);
+        _server = new Server(_port, "/", _webFolderPath, IPAddress.Any, hostname, false, true);
 
         _server.RequestComplete += _server_RequestComplete;
         _server.Start();
