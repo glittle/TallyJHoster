@@ -35,6 +35,9 @@
     <Reference Include="CassiniDev4-lib">
       <HintPath>..\Support\CassiniDev\CassiniDev4-lib.dll</HintPath>
     </Reference>
+    <Reference Include="Gma.QrCodeNet.Encoding">
+      <HintPath>..\Support\Gma.QrCodeNet.Encoding.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />

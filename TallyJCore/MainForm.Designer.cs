@@ -61,8 +61,10 @@
       this.copyURLToClipboardToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
       this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
       this.aboutToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+      this.qrCodeImgControl1 = new Gma.QrCodeNet.Encoding.Windows.Controls.QrCodeImgControl();
       ((System.ComponentModel.ISupportInitialize)(this.txtPort)).BeginInit();
       this.menuStrip1.SuspendLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.qrCodeImgControl1)).BeginInit();
       this.SuspendLayout();
       // 
       // txtFolder
@@ -71,7 +73,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
       this.txtFolder.Location = new System.Drawing.Point(33, 50);
       this.txtFolder.Name = "txtFolder";
-      this.txtFolder.Size = new System.Drawing.Size(215, 20);
+      this.txtFolder.Size = new System.Drawing.Size(224, 20);
       this.txtFolder.TabIndex = 0;
       this.txtFolder.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
       // 
@@ -87,7 +89,7 @@
       // btnSelectFolder
       // 
       this.btnSelectFolder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-      this.btnSelectFolder.Location = new System.Drawing.Point(254, 50);
+      this.btnSelectFolder.Location = new System.Drawing.Point(263, 50);
       this.btnSelectFolder.Name = "btnSelectFolder";
       this.btnSelectFolder.Size = new System.Drawing.Size(32, 20);
       this.btnSelectFolder.TabIndex = 1;
@@ -151,18 +153,16 @@
       // 
       // txtURL
       // 
-      this.txtURL.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-      this.txtURL.Location = new System.Drawing.Point(33, 226);
+      this.txtURL.Location = new System.Drawing.Point(29, 212);
       this.txtURL.Name = "txtURL";
       this.txtURL.ReadOnly = true;
-      this.txtURL.Size = new System.Drawing.Size(208, 20);
+      this.txtURL.Size = new System.Drawing.Size(228, 20);
       this.txtURL.TabIndex = 9;
       // 
       // label3
       // 
       this.label3.AutoSize = true;
-      this.label3.Location = new System.Drawing.Point(12, 210);
+      this.label3.Location = new System.Drawing.Point(12, 189);
       this.label3.Name = "label3";
       this.label3.Size = new System.Drawing.Size(109, 13);
       this.label3.TabIndex = 10;
@@ -170,10 +170,9 @@
       // 
       // btnView
       // 
-      this.btnView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-      this.btnView.Location = new System.Drawing.Point(33, 252);
+      this.btnView.Location = new System.Drawing.Point(140, 238);
       this.btnView.Name = "btnView";
-      this.btnView.Size = new System.Drawing.Size(101, 30);
+      this.btnView.Size = new System.Drawing.Size(109, 30);
       this.btnView.TabIndex = 5;
       this.btnView.Text = "View in Browser";
       this.btnView.UseVisualStyleBackColor = true;
@@ -188,16 +187,15 @@
       this.lblStatus.ForeColor = System.Drawing.Color.Maroon;
       this.lblStatus.Location = new System.Drawing.Point(30, 160);
       this.lblStatus.Name = "lblStatus";
-      this.lblStatus.Size = new System.Drawing.Size(78, 18);
+      this.lblStatus.Size = new System.Drawing.Size(84, 18);
       this.lblStatus.TabIndex = 12;
-      this.lblStatus.Text = "Starting up";
+      this.lblStatus.Text = "Not running";
       // 
       // btnCopyToClipboard
       // 
-      this.btnCopyToClipboard.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-      this.btnCopyToClipboard.Location = new System.Drawing.Point(140, 252);
+      this.btnCopyToClipboard.Location = new System.Drawing.Point(29, 238);
       this.btnCopyToClipboard.Name = "btnCopyToClipboard";
-      this.btnCopyToClipboard.Size = new System.Drawing.Size(101, 30);
+      this.btnCopyToClipboard.Size = new System.Drawing.Size(105, 30);
       this.btnCopyToClipboard.TabIndex = 6;
       this.btnCopyToClipboard.Text = "Copy to Clipboard";
       this.btnCopyToClipboard.UseVisualStyleBackColor = true;
@@ -272,7 +270,7 @@
             this.aboutToolStripMenuItem1});
       this.menuStrip1.Location = new System.Drawing.Point(0, 0);
       this.menuStrip1.Name = "menuStrip1";
-      this.menuStrip1.Size = new System.Drawing.Size(304, 24);
+      this.menuStrip1.Size = new System.Drawing.Size(313, 24);
       this.menuStrip1.TabIndex = 13;
       this.menuStrip1.Text = "menuStrip1";
       // 
@@ -346,11 +344,22 @@
       this.aboutToolStripMenuItem2.Size = new System.Drawing.Size(107, 22);
       this.aboutToolStripMenuItem2.Text = "&About";
       // 
+      // qrCodeImgControl1
+      // 
+      this.qrCodeImgControl1.Image = ((System.Drawing.Image)(resources.GetObject("qrCodeImgControl1.Image")));
+      this.qrCodeImgControl1.Location = new System.Drawing.Point(29, 274);
+      this.qrCodeImgControl1.Name = "qrCodeImgControl1";
+      this.qrCodeImgControl1.Size = new System.Drawing.Size(100, 100);
+      this.qrCodeImgControl1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+      this.qrCodeImgControl1.TabIndex = 14;
+      this.qrCodeImgControl1.TabStop = false;
+      // 
       // MainForm
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.ClientSize = new System.Drawing.Size(304, 304);
+      this.ClientSize = new System.Drawing.Size(313, 389);
+      this.Controls.Add(this.qrCodeImgControl1);
       this.Controls.Add(this.btnCopyToClipboard);
       this.Controls.Add(this.lblStatus);
       this.Controls.Add(this.btnView);
@@ -364,16 +373,19 @@
       this.Controls.Add(this.label1);
       this.Controls.Add(this.txtFolder);
       this.Controls.Add(this.menuStrip1);
+      this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
       this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
       this.MainMenuStrip = this.menuStrip1;
       this.MaximizeBox = false;
       this.MinimumSize = new System.Drawing.Size(320, 342);
       this.Name = "MainForm";
+      this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
       this.Text = "TallyJ Server";
       this.Load += new System.EventHandler(this.MainForm_Load);
       ((System.ComponentModel.ISupportInitialize)(this.txtPort)).EndInit();
       this.menuStrip1.ResumeLayout(false);
       this.menuStrip1.PerformLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.qrCodeImgControl1)).EndInit();
       this.ResumeLayout(false);
       this.PerformLayout();
 
@@ -413,6 +425,7 @@
     private System.Windows.Forms.ToolStripMenuItem copyURLToClipboardToolStripMenuItem1;
     private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem1;
     private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem2;
+    private Gma.QrCodeNet.Encoding.Windows.Controls.QrCodeImgControl qrCodeImgControl1;
   }
 }
 

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Windows.Forms;
+using Gma.QrCodeNet.Encoding;
 using TallyJCore.Properties;
 
 namespace TallyJCore
@@ -30,6 +31,8 @@ namespace TallyJCore
     public void SetUrl(string url)
     {
       txtURL.Text = url;
+
+      qrCodeImgControl1.Text = url;
     }
 
     public void ShowStatusText(string text)

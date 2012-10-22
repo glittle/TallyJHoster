@@ -50,7 +50,7 @@ namespace TallyJCore
 
       try
       {
-        _server = new Server(_port, "/", _webFolderPath, IPAddress.Any, hostname, false, true);
+        _server = new Server(_port, "/TallyJ/", _webFolderPath, IPAddress.Any, hostname, false, true);
 
         _server.RequestComplete += _server_RequestComplete;
         _server.Start();
