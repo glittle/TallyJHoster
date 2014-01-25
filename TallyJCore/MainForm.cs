@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Windows.Forms;
+using TallyJCore.FolderSelector;
 using TallyJCore.Properties;
 
 namespace TallyJCore
@@ -22,9 +23,20 @@ namespace TallyJCore
         {
             txtPort.Value = Settings.Default.Port;
             txtFolder.Text = Settings.Default.WebFolder;
+            txtConnectionString.Text = Settings.Default.Connection;
 
             _main.SetFolder(txtFolder.Text);
             _main.SetPort((int) txtPort.Value);
+            _main.SetConnection(txtConnectionString.Text);
+
+
+            if (Settings.Default.Size.Width > 0)
+            {
+                Size = Settings.Default.Size;
+                Location = Settings.Default.Location;
+            }
+
+            SetButtonStates(Status.Stopped);
         }
 
         public void SetUrl(string url)
@@ -50,16 +62,18 @@ namespace TallyJCore
 
                     txtFolder.Enabled =
                         txtPort.Enabled =
-                            btnStart.Enabled =
-                                startServerToolStripMenuItem1.Enabled =
-                                    btnSelectFolder.Enabled =
-                                        true;
+                            txtConnectionString.Enabled =
+                                btnStart.Enabled =
+                                    startServerToolStripMenuItem1.Enabled =
+                                        btnSelectFolder.Enabled =
+                                            true;
 
                     btnView.Enabled =
-                        viewInBrowserToolStripMenuItem1.Enabled =
-                            btnStop.Enabled =
-                                stopServerToolStripMenuItem1.Enabled =
-                                    false;
+                        btnCopyToClipboard.Enabled =
+                            viewInBrowserToolStripMenuItem1.Enabled =
+                                btnStop.Enabled =
+                                    stopServerToolStripMenuItem1.Enabled =
+                                        false;
 
                     break;
 
@@ -67,16 +81,17 @@ namespace TallyJCore
 
                     txtFolder.Enabled =
                         txtPort.Enabled =
-                            btnStart.Enabled =
+                            txtConnectionString.Enabled = btnStart.Enabled =
                                 startServerToolStripMenuItem1.Enabled =
                                     btnSelectFolder.Enabled =
                                         false;
 
                     btnView.Enabled =
-                        viewInBrowserToolStripMenuItem1.Enabled =
-                            btnStop.Enabled =
-                                stopServerToolStripMenuItem1.Enabled =
-                                    true;
+                        btnCopyToClipboard.Enabled =
+                            viewInBrowserToolStripMenuItem1.Enabled =
+                                btnStop.Enabled =
+                                    stopServerToolStripMenuItem1.Enabled =
+                                        true;
 
                     break;
                 default:
@@ -92,14 +107,15 @@ namespace TallyJCore
 
         private void btnSelectFolder_Click(object sender, EventArgs e)
         {
-            folderBrowserDialog1.ShowNewFolderButton = false;
-            folderBrowserDialog1.Description = "Folder containing web files";
-            folderBrowserDialog1.SelectedPath = txtFolder.Text;
-
-            var result = folderBrowserDialog1.ShowDialog();
-            if (result == DialogResult.OK)
+            var dialog = new FolderSelectDialog
             {
-                txtFolder.Text = Settings.Default.WebFolder = folderBrowserDialog1.SelectedPath;
+                InitialDirectory = txtFolder.Text,
+                Title = "Select the folder containing the web site files"
+            };
+
+            if (dialog.ShowDialog(IntPtr.Zero))
+            {
+                txtFolder.Text = Settings.Default.WebFolder = dialog.SelectedFolder;
                 Settings.Default.Save();
 
                 _main.SetFolder(txtFolder.Text);
@@ -112,6 +128,15 @@ namespace TallyJCore
             Settings.Default.Save();
 
             _main.SetFolder(txtFolder.Text);
+        }
+
+
+        private void txtConnectionString_TextChanged(object sender, EventArgs e)
+        {
+            Settings.Default.Connection = txtConnectionString.Text;
+            Settings.Default.Save();
+
+            _main.SetConnection(txtConnectionString.Text);
         }
 
         private void btnStart_Click(object sender, EventArgs e)
@@ -200,6 +225,18 @@ namespace TallyJCore
         private void copyURLToClipboardToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             _main.CopyUrlToClipboard();
+        }
+
+        private void MainForm_Resize(object sender, EventArgs e)
+        {
+            Settings.Default.Size = Size;
+            Settings.Default.Location = Location;
+            Settings.Default.Save();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+          txtConnectionString.Text = _main.GetCurrentMainConnection();
         }
     }
 }

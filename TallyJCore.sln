@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TallyJCore", "TallyJCore\TallyJCore.csproj", "{1499857E-E546-4AAD-A48D-F94236246D91}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TallyJStandaloneHoster", "TallyJCore\TallyJStandaloneHoster.csproj", "{1499857E-E546-4AAD-A48D-F94236246D91}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
